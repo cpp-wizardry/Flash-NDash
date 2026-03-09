@@ -48,7 +48,19 @@ public class PhotoScorer : MonoBehaviour
         result.distancePoints = distanceScore;
         result.posePoints     = poseScore;
         result.total          = Mathf.Clamp(questScore + framingScore + distanceScore + poseScore, 0, 1000);
-
+        if (result.total < 350)
+        {
+            SoundManager.Instance.PlayBadPicture();
+        }
+        else if (result.total > 600)
+        {
+            SoundManager.Instance.PlayNicePicture();
+        }
+        else
+        {
+            SoundManager.Instance.PlayMidPicture();
+        
+        }
         return result;
     }
 

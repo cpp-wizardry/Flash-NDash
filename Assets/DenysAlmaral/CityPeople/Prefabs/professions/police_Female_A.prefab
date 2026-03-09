@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: -8165237085230050153}
   m_Layer: 0
   m_Name: police_Female_A
-  m_TagString: Untagged
+  m_TagString: Woman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,7 +1024,8 @@ MonoBehaviour:
   - 
   - 
   - 
-  animator: {fileID: 0}
+  stoppedThreshold: 0.1
+  runDistanceThreshold: 15
 --- !u!1 &6265362778501788183
 GameObject:
   m_ObjectHideFlags: 0

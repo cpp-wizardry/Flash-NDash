@@ -255,10 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
   routine:
-  - 
-  - 
-  - 
-  - 
+  - POI_House
+  - POI_Park
+  - POI_Stadium
+  - POI_TagArt
   stoppedThreshold: 0.1
   runDistanceThreshold: 15
 --- !u!1 &226850885270714430

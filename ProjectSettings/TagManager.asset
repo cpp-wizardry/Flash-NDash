@@ -20,6 +20,7 @@ TagManager:
   - Woman
   - Dog
   - Child
+  - POI_Accident
   layers:
   - Default
   - TransparentFX

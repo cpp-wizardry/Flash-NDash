@@ -3,11 +3,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PhotoMode : MonoBehaviour
 {
     public InputActionReference togglePhotoModeAction;
     public InputActionReference takePhotoAction;
+    public GameObject FlashUI;
 
     public GameObject photoModeUI;
     public Camera playerCamera;
@@ -98,6 +100,8 @@ public class PhotoMode : MonoBehaviour
 
         PhotoScoreResult result = PhotoScorer.Instance?.Evaluate(hit, null, questValidated, questPoints);
 
+        StartCoroutine(PlayFlash());
+
         if (result != null)
         {
             QuestManager.Instance?.AddPoints(result.total);
@@ -111,5 +115,14 @@ public class PhotoMode : MonoBehaviour
     {
         _currentAimedNPC?.OnAimCleared();
         _currentAimedNPC = null;
+    }
+
+    private IEnumerator PlayFlash()
+    {
+        FlashUI.SetActive(true);
+        SoundManager.Instance?.PlayFlash();
+        yield return new WaitForSeconds(0.5f);
+        FlashUI.SetActive(false);
+
     }
 }

@@ -68,7 +68,7 @@ public class NPCReaction : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, _playerTransform.position);
         if (distance > reactionDistance) return;
-
+        SoundManager.Instance.PlayVoiceLine();
         switch (reactionType)
         {
             case ReactionType.Poser:

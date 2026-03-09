@@ -1033,7 +1033,7 @@ GameObject:
   - component: {fileID: 7370933452918691597}
   m_Layer: 0
   m_Name: Doctor_Male_B
-  m_TagString: Untagged
+  m_TagString: Man
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1155,7 +1155,8 @@ MonoBehaviour:
   - 
   - 
   - 
-  animator: {fileID: 0}
+  stoppedThreshold: 0.1
+  runDistanceThreshold: 15
 --- !u!1 &7372501814652593214
 GameObject:
   m_ObjectHideFlags: 0

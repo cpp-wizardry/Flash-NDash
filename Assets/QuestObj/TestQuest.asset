@@ -15,8 +15,7 @@ MonoBehaviour:
   title: test
   description: Test
   pointReward: 50000
-  requiredNPCTags:
-  - Human
+  requiredNPCTags: []
   requiredPOITags:
   - POI_TagArt
   requireReactionState: 0

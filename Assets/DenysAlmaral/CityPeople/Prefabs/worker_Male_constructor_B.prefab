@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: worker_Male_constructor_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5cf001466982fa4d8f05c964537b64c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a5cf001466982fa4d8f05c964537b64c, type: 3}
       propertyPath: m_Controller
       value: 
@@ -71,6 +75,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5cf001466982fa4d8f05c964537b64c, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1674672101944582527}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5cf001466982fa4d8f05c964537b64c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6904951726654725241}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5cf001466982fa4d8f05c964537b64c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8593961134888238161}
   m_SourcePrefab: {fileID: 100100000, guid: a5cf001466982fa4d8f05c964537b64c, type: 3}
 --- !u!1 &8184333350258574277 stripped
 GameObject:
@@ -101,3 +111,45 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!195 &-6904951726654725241
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184333350258574277}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &8593961134888238161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184333350258574277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713a7dab6c4bd534a849ec93afd403f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCController
+  routine:
+  - POI_House
+  - POI_Garage
+  - POI_Work
+  - POI_Accident
+  - POI_House
+  stoppedThreshold: 0.1
+  runDistanceThreshold: 15

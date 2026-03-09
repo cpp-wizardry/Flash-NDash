@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3362842205495011196
+--- !u!1 &396310007108329966
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7668460987042487773}
-  - component: {fileID: -7754170752396683365}
-  - component: {fileID: -6215722880921936446}
-  - component: {fileID: 8986320252053260839}
-  - component: {fileID: 2232091663089831332}
-  - component: {fileID: 7825757351164059291}
+  - component: {fileID: 2584922550057036004}
+  - component: {fileID: 6539354299726921265}
+  - component: {fileID: 8595343145673900488}
+  - component: {fileID: 5855493247963647226}
+  - component: {fileID: 7256396201536556473}
+  - component: {fileID: 8084142897508827714}
+  - component: {fileID: 5504961708454492401}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -21,28 +22,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7668460987042487773
+--- !u!4 &2584922550057036004
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362842205495011196}
+  m_GameObject: {fileID: 396310007108329966}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.44038, y: 0.0458, z: 2.22275}
+  m_LocalPosition: {x: 129.24, y: 1.08791, z: 52.80297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-7754170752396683365
+--- !u!114 &6539354299726921265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362842205495011196}
+  m_GameObject: {fileID: 396310007108329966}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba7702685b5ed81479ded0acb4689ada, type: 3}
@@ -55,32 +56,45 @@ MonoBehaviour:
   - {fileID: 913845681951795218, guid: 2435736d6adca23458edd7c80c901e3e, type: 3}
   maxNPCs: 40
   spawnInterval: 3
---- !u!114 &-6215722880921936446
+--- !u!114 &8595343145673900488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362842205495011196}
+  m_GameObject: {fileID: 396310007108329966}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b19415e2f82645d4f905ea96d161a4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
-  allQuests: []
+  allQuests:
+  - {fileID: 11400000, guid: 9c2fc12a8a0895d42b0cc15a5b27220d, type: 2}
   onQuestCompleted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8595343145673900488}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: AddPoints
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPointsAwarded:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8986320252053260839
+--- !u!114 &5855493247963647226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362842205495011196}
+  m_GameObject: {fileID: 396310007108329966}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7c17fccdd762554798f6a1959e56bb6, type: 3}
@@ -88,13 +102,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PhotoValidator
   photoCamera: {fileID: 0}
   maxDistance: 80
---- !u!114 &2232091663089831332
+--- !u!114 &7256396201536556473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362842205495011196}
+  m_GameObject: {fileID: 396310007108329966}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b977e8f8894f27041ba77816346d6470, type: 3}
@@ -123,13 +137,13 @@ MonoBehaviour:
     score: 100
   - clipName: Shy
     score: 80
---- !u!114 &7825757351164059291
+--- !u!114 &8084142897508827714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362842205495011196}
+  m_GameObject: {fileID: 396310007108329966}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38c05ee8a0b135942b8a21b88b98fd72, type: 3}
@@ -138,3 +152,28 @@ MonoBehaviour:
   photoCamera: {fileID: 0}
   textureWidth: 1920
   textureHeight: 1080
+--- !u!114 &5504961708454492401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396310007108329966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6941e12821fdc46b61056f620ebbce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TagArtSpawner
+  sprites:
+  - {fileID: 21300000, guid: e96d25437f482e64495321fa9993c829, type: 3}
+  - {fileID: 21300000, guid: faef9a3977f91ad41ae972b0d0edf8d6, type: 3}
+  - {fileID: 21300000, guid: e179d84cb259577478efceb9db8c23ae, type: 3}
+  - {fileID: 21300000, guid: 13798762c2cee2a46b31028ed741fc77, type: 3}
+  - {fileID: 21300000, guid: 8c0712b6a63405944adf33d7b7a4fc52, type: 3}
+  - {fileID: 21300000, guid: 482ad5647055c1443b9e25a6a8f1d5aa, type: 3}
+  - {fileID: 21300000, guid: f1c51823c5da86649be57bdc752588d1, type: 3}
+  - {fileID: 21300000, guid: 707d80910b36c794b83a97f1b5322eef, type: 3}
+  - {fileID: 21300000, guid: 07e10b2bef3c82b4dbb4f2ab546d92b6, type: 3}
+  - {fileID: 21300000, guid: 7a9cb1b3a9b088b45a5883897d7e8db7, type: 3}
+  - {fileID: 21300000, guid: 3c5bd46129428d44f811aa6f8366970a, type: 3}
+  size: {x: 2, y: 2}
